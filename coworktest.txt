@@ -1,3 +1,8 @@
 beleírok dolgokat lol!
+<<<<<<< HEAD
 beírtam hozzá egészen új dolgokat loL
+=======
+én is lol!
+:D
+>>>>>>> d066c08c4c3718f9fa2dce0a6044ed0b1d5087b2
 
