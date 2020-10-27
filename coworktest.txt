@@ -1,3 +1,54 @@
-beleírok dolgokat lol!
+H _ n g m _ n  logic:
 
-végső megoldás a halál!
+
+1) ASK AND SET LEVEL
+ask for difficulty level, and according to it:
+    import from file the corresponding list of words 
+        pick a random one
+    set lives
+    set ASCII drawing according to the level and lives (always the same loosing picture)
+
+2) ASK FOR INPUT, HANDLE AND DECIDE
+while input is not "quit" or life is not 0 or not win: 
+
+    DISPLAY GAME
+    display as many "_" (with spaces to be readable?) as many chars the string contains
+        display matched letters, if there are any
+        display lives
+        display ASCII drawing
+        display used letters
+
+    while we don't have a valid input:
+        ask for letter input (c and C is the same; accept just one letter, but accept the "quit" word)
+
+    if the input is a letter that was already used: (either matched or unmatched; smallcase and uppercase are equal)
+        print a note
+        ask input again
+
+    (el)if the input is "quit":
+        say goodbye and terminate (after this if the while loop should end)
+
+    (else or el)if the input is something else (not used and still valid, because we left the second while loop):
+        iterate through the given word
+        compare the letter to each letters in the word
+        find the index(es) of the matching letters
+
+            if there is no match in the letters:
+                -1 life
+                +1 line in the ASCII drawing
+                    clear and new display
+                    write the letter somewhere as a note, that it is used (all the used letters should be shown)
+                        (should be added to a list?)
+
+            (else or el)if there is at least one match:
+                change the "_" chars to the matched letters at the corresponding indexes (case sensitive, like T _ _ t)
+    if win:
+        clear?
+        print "Well done" or something
+
+3) ASCII drawing
+    (probably this function can be separated from the main logic)
+
+4) OTHER FUNCTION DEFINITION that can be separated from the main logic (if needed to be separated)
+
+5) ...
